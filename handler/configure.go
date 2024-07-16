@@ -20,11 +20,15 @@ func NewHandler(user *user_usecase.User, new *new_usecase.New) *Handler {
 }
 
 func (h *Handler) ConfigRouteAPI(router *gin.RouterGroup) {
-	//user
+	//users
 	router.POST("/users", h.createUser())
 	router.PUT("/users/update", h.updateUser())
 	router.GET("/users/:id", h.getUserByID())
 
-	//new
+	//news
 	router.POST("/news", h.createNew())
+	router.GET("/news/:id", h.getNewByID())
+	router.GET("/news/user/:user_id", h.getNewsByAuthor())
+	router.PUT("/news/update", h.updateNew())
+	router.DELETE("/news/:id", h.deleteNew())
 }

@@ -5,6 +5,7 @@ import (
 
 	"github.com/ngoctb13/clean-architect-golang/internal/domain/models"
 	"github.com/ngoctb13/clean-architect-golang/internal/domains/new/repos"
+	"github.com/ngoctb13/clean-architect-golang/utils"
 )
 
 type New struct {
@@ -30,7 +31,12 @@ func (n *New) Create(ctx context.Context, record *models.New) (*models.New, erro
 }
 
 func (n *New) Update(ctx context.Context, record *models.New) error {
-	return n.newsRepo.Update(ctx, record)
+	currentNew, err := n.GetByID(ctx, record.ID)
+	if err != nil {
+		return err
+	}
+	utils.ReflectFields(currentNew, record)
+	return n.newsRepo.Update(ctx, currentNew)
 }
 
 func (n *New) Delete(ctx context.Context, id int) error {

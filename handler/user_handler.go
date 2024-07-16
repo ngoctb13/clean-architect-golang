@@ -12,8 +12,7 @@ import (
 )
 
 const (
-	UPDATE_SUCCESS_MESSAGE = "update success!"
-	DELETE_SUCCESS_MESSAGE = "delete success!"
+	UPDATE_USER_SUCCESS_MESSAGE = "update success"
 )
 
 func (h *Handler) createUser() gin.HandlerFunc {
@@ -58,7 +57,7 @@ func (h *Handler) updateUser() gin.HandlerFunc {
 			return
 		}
 
-		c.JSON(http.StatusOK, gin.H{"message": UPDATE_SUCCESS_MESSAGE})
+		c.JSON(http.StatusOK, gin.H{"message": UPDATE_USER_SUCCESS_MESSAGE})
 	}
 }
 

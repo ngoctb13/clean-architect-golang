@@ -63,38 +63,6 @@ func CreateDBAndMigrate(cfg *config.MySQLConfig, migrationFile string) *gorm.DB 
 	return db
 }
 
-// func Migrate(source string, connStr string) {
-// 	var mutex = &sync.Mutex{}
-// 	mutex.Lock()
-// 	defer mutex.Unlock()
-
-// 	fmt.Println("Migrating...")
-// 	fmt.Printf("Source=%+v Connection=%+v\n", source, connStr)
-
-// 	db, _ := sql.Open("mysql", connStr)
-// 	driver, _ := migrateMysql.WithInstance(db, &migrateMysql.Config{})
-
-// 	mg, _ := migrate.NewWithDatabaseInstance(source, "mysql", driver)
-// 	defer mg.Close()
-
-// 	version, dirty, err := mg.Version()
-// 	if err != nil && err.Error() != migrate.ErrNilVersion.Error() {
-// 		panic(err)
-// 	}
-
-// 	if dirty {
-// 		mg.Force(int(version) - 1)
-// 	}
-
-// 	err = mg.Up()
-
-// 	if err != nil && err.Error() != migrate.ErrNoChange.Error() {
-// 		panic(err)
-// 	}
-
-// 	fmt.Println("Migration done...")
-// }
-
 func Migrate(source string, connStr string) {
 	var mutex = &sync.Mutex{}
 	mutex.Lock()
