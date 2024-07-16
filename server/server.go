@@ -48,7 +48,6 @@ func (s *Server) ListenHTTP() error {
 	}
 	address := fmt.Sprintf(":%s", os.Getenv("PORT"))
 	fmt.Println(address)
-	fmt.Println("ahihihihihihihihihihihihi")
 	s.httpServer = &http.Server{
 		Addr:    address,
 		Handler: s.router,
