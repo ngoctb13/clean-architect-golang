@@ -5,6 +5,12 @@ type CreateUserRequest struct {
 	Age  int    `json:"age"`
 }
 
+type UpdateUserRequest struct {
+	ID   int    `json:"id"`
+	Name string `json:"name"`
+	Age  int    `json:"age"`
+}
+
 type CreateUserResponse struct {
 	ID   int    `json:"id"`
 	Name string `json:"name"`

@@ -1,12 +1,13 @@
 package infra
 
 import (
-	"clean-arch-repo/config"
 	"database/sql"
 	"fmt"
 	"log"
 	"sync"
 	"time"
+
+	"github.com/ngoctb13/clean-architect-golang/config"
 
 	"github.com/cenkalti/backoff"
 	"gorm.io/driver/mysql"

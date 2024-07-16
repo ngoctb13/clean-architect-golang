@@ -1,11 +1,12 @@
 package setting
 
 import (
-	"clean-arch-repo/config"
-	"clean-arch-repo/infra"
 	"os"
 	"os/signal"
 	"syscall"
+
+	"github.com/ngoctb13/clean-architect-golang/config"
+	"github.com/ngoctb13/clean-architect-golang/infra"
 
 	"go.uber.org/zap"
 )

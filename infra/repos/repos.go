@@ -1,9 +1,9 @@
 package repos
 
 import (
-	"clean-arch-repo/config"
-	new_repos "clean-arch-repo/internal/domains/new/repos"
-	user_repos "clean-arch-repo/internal/domains/user/repos"
+	"github.com/ngoctb13/clean-architect-golang/config"
+	new_repos "github.com/ngoctb13/clean-architect-golang/internal/domains/new/repos"
+	user_repos "github.com/ngoctb13/clean-architect-golang/internal/domains/user/repos"
 
 	"gorm.io/gorm"
 )

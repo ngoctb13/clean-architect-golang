@@ -1,10 +1,11 @@
 package main
 
 import (
-	"clean-arch-repo/config"
-	"clean-arch-repo/server"
-	"clean-arch-repo/setting"
 	"flag"
+
+	"github.com/ngoctb13/clean-architect-golang/config"
+	"github.com/ngoctb13/clean-architect-golang/server"
+	"github.com/ngoctb13/clean-architect-golang/setting"
 
 	"go.uber.org/zap"
 )

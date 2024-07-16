@@ -1,10 +1,10 @@
 package server
 
 import (
-	hdl "clean-arch-repo/handler"
-	"clean-arch-repo/infra/repos"
-	new_usecase "clean-arch-repo/internal/domains/new/usecases"
-	user_usecase "clean-arch-repo/internal/domains/user/usecases"
+	hdl "github.com/ngoctb13/clean-architect-golang/handler"
+	"github.com/ngoctb13/clean-architect-golang/infra/repos"
+	new_usecase "github.com/ngoctb13/clean-architect-golang/internal/domains/new/usecases"
+	user_usecase "github.com/ngoctb13/clean-architect-golang/internal/domains/user/usecases"
 
 	"github.com/gin-contrib/cors"
 )

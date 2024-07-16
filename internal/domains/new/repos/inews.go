@@ -1,8 +1,9 @@
 package repos
 
 import (
-	"clean-arch-repo/internal/domain/models"
 	"context"
+
+	"github.com/ngoctb13/clean-architect-golang/internal/domain/models"
 )
 
 type INewsRepo interface {

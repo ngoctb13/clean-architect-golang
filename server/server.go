@@ -1,13 +1,14 @@
 package server
 
 import (
-	"clean-arch-repo/config"
-	"clean-arch-repo/infra"
-	"clean-arch-repo/infra/repos"
 	"fmt"
 	"net"
 	"net/http"
 	"os"
+
+	"github.com/ngoctb13/clean-architect-golang/config"
+	"github.com/ngoctb13/clean-architect-golang/infra"
+	"github.com/ngoctb13/clean-architect-golang/infra/repos"
 
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"

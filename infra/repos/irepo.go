@@ -1,8 +1,8 @@
 package repos
 
 import (
-	new_repos "clean-arch-repo/internal/domains/new/repos"
-	user_repos "clean-arch-repo/internal/domains/user/repos"
+	new_repos "github.com/ngoctb13/clean-architect-golang/internal/domains/new/repos"
+	user_repos "github.com/ngoctb13/clean-architect-golang/internal/domains/user/repos"
 )
 
 type IRepo interface {

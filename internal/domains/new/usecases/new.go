@@ -1,9 +1,10 @@
 package usecases
 
 import (
-	"clean-arch-repo/internal/domain/models"
-	"clean-arch-repo/internal/domains/new/repos"
 	"context"
+
+	"github.com/ngoctb13/clean-architect-golang/internal/domain/models"
+	"github.com/ngoctb13/clean-architect-golang/internal/domains/new/repos"
 )
 
 type New struct {

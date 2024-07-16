@@ -1,10 +1,11 @@
 package handler
 
 import (
-	"clean-arch-repo/handler/models"
-	modelsUsecase "clean-arch-repo/internal/domain/models"
 	"log"
 	"net/http"
+
+	"github.com/ngoctb13/clean-architect-golang/handler/models"
+	modelsUsecase "github.com/ngoctb13/clean-architect-golang/internal/domain/models"
 
 	"github.com/gin-gonic/gin"
 )
