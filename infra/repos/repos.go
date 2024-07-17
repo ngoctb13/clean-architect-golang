@@ -3,6 +3,7 @@ package repos
 import (
 	"github.com/ngoctb13/clean-architect-golang/config"
 	new_repos "github.com/ngoctb13/clean-architect-golang/internal/domains/new/repos"
+	role_repos "github.com/ngoctb13/clean-architect-golang/internal/domains/role/repos"
 	user_repos "github.com/ngoctb13/clean-architect-golang/internal/domains/user/repos"
 
 	"gorm.io/gorm"
@@ -26,4 +27,8 @@ func (r *Repo) Users() user_repos.IUsersRepo {
 
 func (r *Repo) News() new_repos.INewsRepo {
 	return InitNewsSQLRepo(r.db)
+}
+
+func (r *Repo) Roles() role_repos.IRolesRepo {
+	return NewRoleSQLRepo(r.db)
 }

@@ -11,4 +11,6 @@ type IUsersRepo interface {
 	Update(ctx context.Context, record *models.User) error
 	Delete(ctx context.Context, id int) error
 	GetByID(ctx context.Context, id int) (*models.User, error)
+	GetByUsername(ctx context.Context, username string) (*models.User, error)
+	AssignRole(ctx context.Context, userID int, roleID int) error
 }

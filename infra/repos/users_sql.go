@@ -33,6 +33,20 @@ func (u *usersSQLRepo) Delete(ctx context.Context, id int) error {
 
 func (u *usersSQLRepo) GetByID(ctx context.Context, id int) (*models.User, error) {
 	res := &models.User{}
-	err := u.db.First(&res, id).Error
+	err := u.db.Preload("Roles").First(&res, id).Error
 	return res, err
+}
+
+func (u *usersSQLRepo) GetByUsername(ctx context.Context, username string) (*models.User, error) {
+	user := &models.User{}
+	err := u.db.Preload("Roles").Where("username = ?", username).First(&user).Error
+	return user, err
+}
+
+func (u *usersSQLRepo) AssignRole(ctx context.Context, userID int, roleID int) error {
+	userRole := &models.UserRole{
+		UserID: userID,
+		RoleID: roleID,
+	}
+	return u.db.Create(userRole).Error
 }
